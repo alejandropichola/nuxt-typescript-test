@@ -48,12 +48,19 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    ['@nuxtjs/pwa', { icon: false }],
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  pwa: {
+    workbox: {
+      offline: true,
+      cache: true,
+    },
   },
   /*
   ** Build configuration
